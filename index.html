@@ -18,25 +18,9 @@
 
 <body>    
     <!--Barra Principal de Navegación-->  
-    <nav>
-        <!--Menu-->
-        <ul id="opcionesInicio" class="dropdown-content">
-            <li><a href="galery.html" class="grey darken-2 white-text">Galería Online</a></li>
-            <li class="divider" ></li>
-            <li><a href="buy.html" class="grey darken-2 white-text">Alquilar o Comprar Obras</a></li>
-            <li class="divider" ></li>
-            <li><a href="opinions.html" class="grey darken-2 white-text">Sugerencias</a></li>
-        </ul>
-        <div id="NavBar" class="nav-wrapper grey darken-2" >
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="opcionesInicio"><i class="material-icons">menu</i></a></li>
-            </ul>
-            <a href="index.html" class="brand-logo center"><img class="responsive-img" src="images/Logo.png" style="width:60px"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#!">Sign In</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="barra">
+        <generalbar></generalbar>
+    </div>
     <!--Resto del Inicio-->  
     <div id="resto">
         <div id="inicio" class="parallax-container">
@@ -82,17 +66,19 @@
     </div>
 
     <!--Footer-->
-    <footer class="page-footer grey darken-2">
-        <div class="container">
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2019 - Carlos Wilfredo Romero Maradiaga
-            </div>
-          </div>
-    </footer>
+    <div id="footer">
+        <generalfooter></generalfooter>
+    </div>
 
     <script>
+        new Vue({
+            el: '#barra'
+        });
+
+        new Vue({
+            el: '#footer'
+        });
+
         //Inicializización de la DropDown de Opciones
         document.addEventListener('DOMContentLoaded', 
         function() {
