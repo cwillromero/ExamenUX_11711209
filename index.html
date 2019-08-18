@@ -21,11 +21,11 @@
     <nav>
         <!--Menu-->
         <ul id="opcionesInicio" class="dropdown-content">
-            <li><a href="#!" class="grey darken-2 white-text">Ver Pinturas</a></li>
+            <li><a href="#!" class="grey darken-2 white-text">Galería Online</a></li>
             <li class="divider" ></li>
-            <li><a href="#!" class="grey darken-2 white-text">Alquilar o Comprar Pintura</a></li>
+            <li><a href="#!" class="grey darken-2 white-text">Alquilar o Comprar Obras</a></li>
             <li class="divider" ></li>
-            <li><a href="#!" class="grey darken-2 white-text">Sobre Nosotros</a></li>
+            <li><a href="#!" class="grey darken-2 white-text">Sugerencias</a></li>
         </ul>
         <div id="NavBar" class="nav-wrapper grey darken-2" >
             <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -42,6 +42,7 @@
         <div id="inicio" class="parallax-container">
             <div class="parallax"><img src="images/Foto1.jpg" class="responsive-img" ></div>
         </div>
+        <!--Información de la Empresa-->
         <div class="section white">
             <div class="row container ">
                 <h2 class="header indigo-text text-lighten-1">Will's Arts</h2>
@@ -52,6 +53,27 @@
                     <br>
                     Nuestra página web provee los siguientes servicios:
                 </p>
+                <!--Servicios de la Web Page-->
+                <div>
+                    <ul id = "servicios" class="collapsible">
+                        <li>
+                        <div class="collapsible-header green accent-2"><i class="material-icons">color_lens</i>Galería Online</div>
+                        <div class="collapsible-body"><span>Le permite ver las Obras de las que hemos hecho Réplicas.
+                            <br> También se tiene información relevante sobre la Obra y su autor original, entre otras opciones. 
+                        </span></div>
+                        </li>
+                        <li>
+                        <div class="collapsible-header red lighten-1"><i class="material-icons">place</i>Alquiler o Compra de Obras</div>
+                        <div class="collapsible-body"><span>Le permite ver las obras disponibles, precio de alquiler y compra, entre otras cosas.
+                                <br> Ofrecemos servicio a Domicilio.
+                        </span></div>
+                        </li>
+                        <li>
+                        <div class="collapsible-header deep-purple lighten-2"><i class="material-icons">help</i>Sugerencias</div>
+                        <div class="collapsible-body"><span>Si no encuentra una Obra de su agrado puede sugerirnos las que usted desee en dicha sección.</span></div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="parallax-container">
@@ -83,6 +105,12 @@
         function() {
             var elems = document.querySelectorAll('.parallax');
             var instances = M.Parallax.init(elems, inicio);
+        });
+        //Inicializacion del Collapsible de los servicios de le web Page
+        document.addEventListener('DOMContentLoaded', 
+        function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, servicios);
         });
     </script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
