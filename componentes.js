@@ -1,6 +1,6 @@
 Vue.component('generalbar', {
     data(){
-        return {nombre:"Sing In",}
+        return {nombre:"Perfil",}
     },
     template: 
     `
@@ -30,7 +30,7 @@ Vue.component('generalbar', {
 
 Vue.component('generalfooter', {
     data(){
-        return {nombre:"Sing In",}
+        return {nombre:"Perfil",}
     },
     template: 
     `
