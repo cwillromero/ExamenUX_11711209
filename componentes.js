@@ -7,7 +7,7 @@ Vue.component('generalbar', {
     <nav>
         <!--Menu-->
         <ul id="opcionesInicio" class="dropdown-content">
-            <li><a href="galery.html" class="grey darken-2 white-text">Inicio</a></li>
+            <li><a href="index.html" class="grey darken-2 white-text">Inicio</a></li>
             <li class="divider" ></li>
             <li><a href="galery.html" class="grey darken-2 white-text">Galería Online</a></li>
             <li class="divider" ></li>
