@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Will's Arts - Inicio</title>
+    <title>Will's Arts - Galery</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="componentes.js"></script>
     <!--Import Google Icon Font-->
@@ -16,16 +16,62 @@
 
 </head>
 
-<body>    
+<body bgcolor="#263743">    
     <!--Barra Principal de Navegación-->  
    <div id="barra">
        <generalbar></generalbar>
    </div>
-   <div id="footer">
+
+   <div class="carousel carousel-slider center">
+        <div id="pic1" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic2" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+                <h2>{{nombre}}</h2>
+                <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic3" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic4" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic5" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic6" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic7" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic8" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic9" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+        <div id="pic10" class="carousel-item amber white-text" href="#9!" v-bind:style="styleObject">
+            <h2>{{nombre}}</h2>
+            <p class="white-text">{{info}}</p>
+        </div>
+      </div>
+      <br>
+
+    <div id="footer">
         <generalfooter></generalfooter>
     </div>
 
     <script>
+        window.onresize = function(){ location.reload(); }
         new Vue({
             el: '#barra'
         });
@@ -38,6 +84,62 @@
             var elems = document.querySelectorAll('.dropdown-trigger');
             var instances = M.Dropdown.init(elems, opcionesInicio);
         });
+
+        //Inicializacion de el Carousel
+        document.addEventListener('DOMContentLoaded', 
+        function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {duration:"200", indicators:"true"});
+        });
+
+        //Inicialización del Zoom
+        //document.addEventListener('DOMContentLoaded', function() {
+        //    var elems = document.querySelectorAll('.carousel-item');
+        //    var instances = M.Materialbox.init(elems, {inDuration:"200", outDuration:"200"});
+        //});
+        var nombres = [
+            "Perros jugando al Póquer (Dogs PLaying Poker)",
+            "La Noche Estrellada",
+            "La Mona Lisa",
+            "El Grito",
+            "El portador de flores",
+            "La persistencia de la memoria",
+            "La joven de la perla",
+            "La madre de Whistler (Whistler's Mothers)",
+            "Baile en el Moulin de la Galette (Bal du moulin de la galette)",
+            "Un domingo por la tarde en la isla de La Grande Jatte"
+        ]
+        var infos = [
+            "Encargado por cigarros Brown & Begelow en 1903, el pintor americano C.M. Coolidge pintó 16 imágenes inolvidables de Dogs Playing Poker para la marca. ",
+            "Vincent Van Gogh ha pintado un sinnúmero de conocidas piezas; sin embargo su pintura La Noche Estrellada es sobradamente considerada su opus magnum. Pintada en 1889, la pieza fue hecha desde la memoria y representa caprichosamente la vista desde su habitación del sanatorio donde residía en ese momento.",
+            "Ninguna lista de las pinturas más famosas estaría completa sin la mención de la Mona Lisa de Leonardo da Vinci. Este infame retrato de Lisa del Giocondo fue completado en algún momento entre 1503 - 1519 y actualmente esta exhibida en el Museo del Louvre en París.",
+            "Usando óleo y pastel sobre cartón, Edvard Munch pintó su obra más famosa, El Grito, hacia 1893. ",
+            "Conocido en su idioma natal como Cargador de flores, The Flower Carrier esta pintado por Diego Rivera en 1953. ",
+            "Pintada en 1931 por otro artista español, La persistencia de la Memoria de Salvador Dalí es una de las piezas mas reconocibles e individuales de la historia del arte.",
+            "Considerada por algunos como la Mona Lisa del Norte, esta encantadora pintura del artista holandés Johannes Vermeer, representa exactamente lo que el título indica - La joven de la perla (Girl with Pearl Earring). Completada hacia 1665.",
+            "Whistler' Mother es el nombre truncado del retrato más famoso de James McNeill conocida originalmente como Retrato en blanco y negro de la madre del artista. Pintado en 1871.",
+            "Mientras que las imágenes de esta pintura no podrían ser reconocidas inmediatamente, ha sido vendida por $78,1 millones, Bal du Moulin de la Galette, del pintor francés Auguste Renoires.",
+            "Usando la única técnica del puntillismo, creando una imagen completa compuesta por puntos, el pintor francés Georges Seurat nos trae su más famosa obra, Una tarde de Domingo en la isla de La Grande Jatte."
+        ]
+        for (var i = 1; i <= 10; i++) {
+            new Vue({
+            el: '#pic'+i,
+            data: {
+                styleObject:{
+                'background-image': 'url('+'images/Foto'+i+'.jpg'+')',
+                'background-position':'center',
+                'background-repeat':'no-repeat',
+                'background-size':'cover'
+                },
+                nombre: nombres[i-1],
+                info: infos[i-1]
+            }
+
+            });
+        }
+
+        
+
 
     </script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
