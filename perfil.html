@@ -77,17 +77,12 @@
         const perfil = new Vue({
                 el: '#perfil',
                 data: {
-                    able:'',
                     Fname:'',
                     Lname:'',
                     pass:'',
                     email:''
                 },
                 mounted() {
-                    if (localStorage.able) {
-                        this.able = localStorage.able;
-                        console.log("Retorné "+this.able);
-                    }
                     if (localStorage.Fname) {
                         this.Fname = localStorage.Fname;
                         console.log("Retorné "+this.Fname);
@@ -107,8 +102,6 @@
                 },
                 methods: {
                     perfilguardar() {
-                        able='disabled';
-                        localStorage.able = this.able;
                         localStorage.Fname = this.Fname;
                         localStorage.Lname = this.Lname;
                         localStorage.pass = this.pass;
