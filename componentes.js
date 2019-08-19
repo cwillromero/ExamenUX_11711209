@@ -7,6 +7,8 @@ Vue.component('generalbar', {
     <nav>
         <!--Menu-->
         <ul id="opcionesInicio" class="dropdown-content">
+            <li><a href="galery.html" class="grey darken-2 white-text">Inicio</a></li>
+            <li class="divider" ></li>
             <li><a href="galery.html" class="grey darken-2 white-text">Galería Online</a></li>
             <li class="divider" ></li>
             <li><a href="buy.html" class="grey darken-2 white-text">Alquilar o Comprar Obras</a></li>
@@ -35,10 +37,10 @@ Vue.component('generalfooter', {
     <footer class="page-footer grey darken-2">
         <div class="container">
             <div class="row">
+                <div class="col s3"><a class="blue-text text-lighten-2 " href="index.html"><i class="material-icons left">home</i>Inicio</a></div>
                 <div class="col s3"><a class="grey-text text-lighten-3" href="galery.html"><i class="material-icons left">color_lens</i>Galería Online</a></div>
                 <div class="col s3"><a class="grey-text text-lighten-3" href="buy.html"><i class="material-icons left" >place</i>Alquilar o Comprar</a></div>
                 <div class="col s3"><a class="grey-text text-lighten-3" href="index.html"><i class="material-icons left">help</i>Sugerencias</a></div>
-                <div class="col s3"><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">account_box</i>{{ nombre }}</a></div>
             </div>            
           </div>
           <div class="footer-copyright">
